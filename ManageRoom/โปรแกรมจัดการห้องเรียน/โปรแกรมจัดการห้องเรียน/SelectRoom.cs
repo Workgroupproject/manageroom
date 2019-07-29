@@ -85,7 +85,7 @@ namespace โปรแกรมจัดการห้องเรียน
 
         private void menu_exit_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)

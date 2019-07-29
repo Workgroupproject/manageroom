@@ -86,6 +86,12 @@
     <Compile Include="Aboutprogram.Designer.cs">
       <DependentUpon>Aboutprogram.cs</DependentUpon>
     </Compile>
+    <Compile Include="FeedbackToSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackToSupport.Designer.cs">
+      <DependentUpon>FeedbackToSupport.cs</DependentUpon>
+    </Compile>
     <Compile Include="LearnTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +124,26 @@
     <Compile Include="HouseworkTable.Designer.cs">
       <DependentUpon>HouseworkTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentInRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentInRoom.Designer.cs">
+      <DependentUpon>StudentInRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UseroomTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UseroomTable.Designer.cs">
+      <DependentUpon>UseroomTable.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Aboutprogram.resx">
       <DependentUpon>Aboutprogram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Developer.resx">
       <DependentUpon>Developer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackToSupport.resx">
+      <DependentUpon>FeedbackToSupport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FirstPage.resx">
       <DependentUpon>FirstPage.cs</DependentUpon>
@@ -148,6 +169,12 @@
     </Compile>
     <EmbeddedResource Include="HouseworkTable.resx">
       <DependentUpon>HouseworkTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentInRoom.resx">
+      <DependentUpon>StudentInRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UseroomTable.resx">
+      <DependentUpon>UseroomTable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

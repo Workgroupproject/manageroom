@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace โปรแกรมจัดการห้องเรียน
 {
@@ -138,7 +139,45 @@ namespace โปรแกรมจัดการห้องเรียน
 
         private void ออกToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
+        }
+
+        private void frm_Learntable_Shown(object sender, EventArgs e)
+        {
+            String sql = " SELECT * FROM StudentM33 WHERE Number = 5 ";
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-JS7HVA0\MYSERVER;Initial Catalog=StudentList;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand(sql, con);
+            con.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                txt_Mon1.Text = (dr["Number"].ToString());
+                txt_Mon2.Text = (dr["ID"].ToString());
+                txt_Mon3.Text = (dr["Name"].ToString());
+            }
+            con.Close();
+        }
+
+        private void txt_Mon1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
+    /*String source = @"Data Source=DESKTOP-JS7HVA0\MYSERVER;Initial Catalog=Student;Integrated Security=True";
+    SqlConnection con = new SqlConnection(source);
+    con.Open();
+
+            String sqlselectQuery = "SELECT * FROM Student WHERE Name =";
+    SqlCommand cmd = new SqlCommand(sqlselectQuery, con);
+    SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+           {
+                txt_Mon1.Text = (dr["Name"].ToString());
+               txt_Mon2.Text = (dr["Grade"].ToString());
+             
+            con.Close();
+        }
+txt_Mon3.Text = (dr["Room"].ToString());
+            }*/

@@ -85,13 +85,13 @@
             // menu_import
             // 
             this.menu_import.Name = "menu_import";
-            this.menu_import.Size = new System.Drawing.Size(120, 26);
+            this.menu_import.Size = new System.Drawing.Size(181, 26);
             this.menu_import.Text = "นำเข้า";
             // 
             // menu_exit
             // 
             this.menu_exit.Name = "menu_exit";
-            this.menu_exit.Size = new System.Drawing.Size(120, 26);
+            this.menu_exit.Size = new System.Drawing.Size(181, 26);
             this.menu_exit.Text = "ออก";
             this.menu_exit.Click += new System.EventHandler(this.menu_exit_Click);
             // 
@@ -179,6 +179,9 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("TH SarabunPSK", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button5.Location = new System.Drawing.Point(707, 329);
             this.button5.Name = "button5";
@@ -186,11 +189,14 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "ห้อง 6";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // cmd_Room3
             // 
+            this.cmd_Room3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmd_Room3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmd_Room3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmd_Room3.Font = new System.Drawing.Font("TH SarabunPSK", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cmd_Room3.Location = new System.Drawing.Point(707, 43);
             this.cmd_Room3.Name = "cmd_Room3";
@@ -198,11 +204,14 @@
             this.cmd_Room3.TabIndex = 4;
             this.cmd_Room3.Text = "ห้อง 3";
             this.cmd_Room3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmd_Room3.UseVisualStyleBackColor = true;
+            this.cmd_Room3.UseVisualStyleBackColor = false;
             this.cmd_Room3.Click += new System.EventHandler(this.button6_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("TH SarabunPSK", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button3.Location = new System.Drawing.Point(385, 329);
             this.button3.Name = "button3";
@@ -210,11 +219,14 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "ห้อง 5";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // cmd_Room2
             // 
+            this.cmd_Room2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmd_Room2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmd_Room2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmd_Room2.Font = new System.Drawing.Font("TH SarabunPSK", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cmd_Room2.Location = new System.Drawing.Point(385, 43);
             this.cmd_Room2.Name = "cmd_Room2";
@@ -222,11 +234,14 @@
             this.cmd_Room2.TabIndex = 2;
             this.cmd_Room2.Text = "ห้อง 2";
             this.cmd_Room2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmd_Room2.UseVisualStyleBackColor = true;
+            this.cmd_Room2.UseVisualStyleBackColor = false;
             this.cmd_Room2.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("TH SarabunPSK", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button2.Location = new System.Drawing.Point(55, 329);
             this.button2.Name = "button2";
@@ -234,11 +249,14 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "ห้อง 4";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // cmd_Room1
             // 
+            this.cmd_Room1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmd_Room1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmd_Room1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmd_Room1.Font = new System.Drawing.Font("TH SarabunPSK", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cmd_Room1.Location = new System.Drawing.Point(55, 43);
             this.cmd_Room1.Name = "cmd_Room1";
@@ -246,7 +264,7 @@
             this.cmd_Room1.TabIndex = 0;
             this.cmd_Room1.Text = "ห้อง 1";
             this.cmd_Room1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cmd_Room1.UseVisualStyleBackColor = true;
+            this.cmd_Room1.UseVisualStyleBackColor = false;
             this.cmd_Room1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menuStrip2
@@ -288,6 +306,7 @@
             // cmd_Accept
             // 
             this.cmd_Accept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmd_Accept.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_Accept.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cmd_Accept.FlatAppearance.BorderSize = 3;
             this.cmd_Accept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

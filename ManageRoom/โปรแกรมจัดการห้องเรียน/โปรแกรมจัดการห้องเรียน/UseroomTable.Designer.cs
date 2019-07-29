@@ -1,6 +1,6 @@
 ﻿namespace โปรแกรมจัดการห้องเรียน
 {
-    partial class frm_Learntable
+    partial class frm_Useroomtable
     {
         /// <summary>
         /// Required designer variable.
@@ -37,13 +37,15 @@
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เกยวกบToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เกยวกบโปรแกรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ตดตอToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Information = new System.Windows.Forms.Panel();
             this.lbl_Teacher = new System.Windows.Forms.Label();
             this.lbl_Teacherinlesson = new System.Windows.Forms.Label();
-            this.lbl_room = new System.Windows.Forms.Label();
-            this.lbl_Whatroom = new System.Windows.Forms.Label();
             this.lbl_Lesson = new System.Windows.Forms.Label();
             this.lbl_Whatlesson = new System.Windows.Forms.Label();
+            this.lbl_Articlepage = new System.Windows.Forms.Label();
+            this.cmd_Savedata = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnl_Learntable = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -126,9 +128,6 @@
             this.txt_T1 = new System.Windows.Forms.TextBox();
             this.txt_Timeandday = new System.Windows.Forms.TextBox();
             this.cmd_Changedata = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cmd_Savedata = new System.Windows.Forms.Button();
-            this.lbl_Articlepage = new System.Windows.Forms.Label();
             this.img_Teacherpicture = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.pnl_Information.SuspendLayout();
@@ -147,7 +146,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1262, 28);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // ไฟลToolStripMenuItem
@@ -157,11 +156,12 @@
             this.ไฟลToolStripMenuItem.Name = "ไฟลToolStripMenuItem";
             this.ไฟลToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
             this.ไฟลToolStripMenuItem.Text = "ไฟล์";
+            this.ไฟลToolStripMenuItem.Click += new System.EventHandler(this.ไฟลToolStripMenuItem_Click);
             // 
             // ออกToolStripMenuItem
             // 
             this.ออกToolStripMenuItem.Name = "ออกToolStripMenuItem";
-            this.ออกToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.ออกToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
             this.ออกToolStripMenuItem.Text = "ออก";
             this.ออกToolStripMenuItem.Click += new System.EventHandler(this.ออกToolStripMenuItem_Click);
             // 
@@ -197,7 +197,8 @@
             // เกยวกบToolStripMenuItem
             // 
             this.เกยวกบToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.เกยวกบโปรแกรมToolStripMenuItem});
+            this.เกยวกบโปรแกรมToolStripMenuItem,
+            this.ตดตอToolStripMenuItem});
             this.เกยวกบToolStripMenuItem.Name = "เกยวกบToolStripMenuItem";
             this.เกยวกบToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.เกยวกบToolStripMenuItem.Text = "เกี่ยวกับ";
@@ -208,25 +209,29 @@
             this.เกยวกบโปรแกรมToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.เกยวกบโปรแกรมToolStripMenuItem.Text = "เกี่ยวกับโปรแกรม";
             // 
+            // ตดตอToolStripMenuItem
+            // 
+            this.ตดตอToolStripMenuItem.Name = "ตดตอToolStripMenuItem";
+            this.ตดตอToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.ตดตอToolStripMenuItem.Text = "ติดต่อ";
+            // 
             // pnl_Information
             // 
             this.pnl_Information.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.pnl_Information.Controls.Add(this.lbl_Teacher);
             this.pnl_Information.Controls.Add(this.img_Teacherpicture);
             this.pnl_Information.Controls.Add(this.lbl_Teacherinlesson);
-            this.pnl_Information.Controls.Add(this.lbl_room);
-            this.pnl_Information.Controls.Add(this.lbl_Whatroom);
             this.pnl_Information.Controls.Add(this.lbl_Lesson);
             this.pnl_Information.Controls.Add(this.lbl_Whatlesson);
             this.pnl_Information.Location = new System.Drawing.Point(999, 28);
             this.pnl_Information.Name = "pnl_Information";
             this.pnl_Information.Size = new System.Drawing.Size(263, 648);
-            this.pnl_Information.TabIndex = 1;
+            this.pnl_Information.TabIndex = 2;
             // 
             // lbl_Teacher
             // 
             this.lbl_Teacher.Font = new System.Drawing.Font("TH SarabunPSK", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbl_Teacher.Location = new System.Drawing.Point(67, 556);
+            this.lbl_Teacher.Location = new System.Drawing.Point(59, 510);
             this.lbl_Teacher.Name = "lbl_Teacher";
             this.lbl_Teacher.Size = new System.Drawing.Size(138, 34);
             this.lbl_Teacher.TabIndex = 6;
@@ -235,52 +240,74 @@
             // lbl_Teacherinlesson
             // 
             this.lbl_Teacherinlesson.Font = new System.Drawing.Font("TH SarabunPSK", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbl_Teacherinlesson.Location = new System.Drawing.Point(55, 231);
+            this.lbl_Teacherinlesson.Location = new System.Drawing.Point(57, 185);
             this.lbl_Teacherinlesson.Name = "lbl_Teacherinlesson";
             this.lbl_Teacherinlesson.Size = new System.Drawing.Size(163, 83);
             this.lbl_Teacherinlesson.TabIndex = 4;
             this.lbl_Teacherinlesson.Text = "กำลังเรียนกับอาจารย์";
             this.lbl_Teacherinlesson.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lbl_room
-            // 
-            this.lbl_room.Font = new System.Drawing.Font("TH SarabunPSK", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbl_room.Location = new System.Drawing.Point(96, 191);
-            this.lbl_room.Name = "lbl_room";
-            this.lbl_room.Size = new System.Drawing.Size(79, 30);
-            this.lbl_room.TabIndex = 3;
-            this.lbl_room.Text = "-";
-            this.lbl_room.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbl_Whatroom
-            // 
-            this.lbl_Whatroom.Font = new System.Drawing.Font("TH SarabunPSK", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbl_Whatroom.Location = new System.Drawing.Point(55, 140);
-            this.lbl_Whatroom.Name = "lbl_Whatroom";
-            this.lbl_Whatroom.Size = new System.Drawing.Size(163, 38);
-            this.lbl_Whatroom.TabIndex = 2;
-            this.lbl_Whatroom.Text = "เรียนอยู่ห้อง";
-            this.lbl_Whatroom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // lbl_Lesson
             // 
             this.lbl_Lesson.Font = new System.Drawing.Font("TH SarabunPSK", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbl_Lesson.Location = new System.Drawing.Point(91, 98);
+            this.lbl_Lesson.Location = new System.Drawing.Point(91, 114);
             this.lbl_Lesson.Name = "lbl_Lesson";
             this.lbl_Lesson.Size = new System.Drawing.Size(84, 38);
             this.lbl_Lesson.TabIndex = 1;
-            this.lbl_Lesson.Text = "ไม่ได้เรียน";
+            this.lbl_Lesson.Text = "ม.3/3";
             this.lbl_Lesson.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_Whatlesson
             // 
             this.lbl_Whatlesson.Font = new System.Drawing.Font("TH SarabunPSK", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbl_Whatlesson.Location = new System.Drawing.Point(48, 47);
+            this.lbl_Whatlesson.Location = new System.Drawing.Point(48, 63);
             this.lbl_Whatlesson.Name = "lbl_Whatlesson";
             this.lbl_Whatlesson.Size = new System.Drawing.Size(170, 37);
             this.lbl_Whatlesson.TabIndex = 0;
-            this.lbl_Whatlesson.Text = "ตอนนี้กำลังเรียน";
+            this.lbl_Whatlesson.Text = "ตอนนี้ห้องที่ใช้อยู่คือ";
             this.lbl_Whatlesson.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_Articlepage
+            // 
+            this.lbl_Articlepage.AutoSize = true;
+            this.lbl_Articlepage.Font = new System.Drawing.Font("TH SarabunPSK", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbl_Articlepage.Location = new System.Drawing.Point(25, 39);
+            this.lbl_Articlepage.Name = "lbl_Articlepage";
+            this.lbl_Articlepage.Size = new System.Drawing.Size(395, 66);
+            this.lbl_Articlepage.TabIndex = 9;
+            this.lbl_Articlepage.Text = "ตารางการใช้ห้องม.3/3";
+            // 
+            // cmd_Savedata
+            // 
+            this.cmd_Savedata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmd_Savedata.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmd_Savedata.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.cmd_Savedata.FlatAppearance.BorderSize = 3;
+            this.cmd_Savedata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmd_Savedata.Font = new System.Drawing.Font("TH SarabunPSK", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.cmd_Savedata.Location = new System.Drawing.Point(36, 605);
+            this.cmd_Savedata.Name = "cmd_Savedata";
+            this.cmd_Savedata.Size = new System.Drawing.Size(193, 44);
+            this.cmd_Savedata.TabIndex = 8;
+            this.cmd_Savedata.Text = "บันทึกการเปลี่ยนแปลง";
+            this.cmd_Savedata.UseVisualStyleBackColor = false;
+            this.cmd_Savedata.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("TH SarabunPSK", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button1.Location = new System.Drawing.Point(816, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 44);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "กลับสู่หน้าหลัก";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pnl_Learntable
             // 
@@ -369,7 +396,7 @@
             this.pnl_Learntable.Location = new System.Drawing.Point(72, 114);
             this.pnl_Learntable.Name = "pnl_Learntable";
             this.pnl_Learntable.Size = new System.Drawing.Size(851, 462);
-            this.pnl_Learntable.TabIndex = 2;
+            this.pnl_Learntable.TabIndex = 10;
             // 
             // panel4
             // 
@@ -1134,7 +1161,6 @@
             this.txt_Mon1.TabIndex = 28;
             this.txt_Mon1.Text = "08.10-09.00น.";
             this.txt_Mon1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_Mon1.TextChanged += new System.EventHandler(this.txt_Mon1_TextChanged);
             // 
             // txt_Friday
             // 
@@ -1550,79 +1576,33 @@
             this.cmd_Changedata.Location = new System.Drawing.Point(36, 605);
             this.cmd_Changedata.Name = "cmd_Changedata";
             this.cmd_Changedata.Size = new System.Drawing.Size(169, 44);
-            this.cmd_Changedata.TabIndex = 3;
+            this.cmd_Changedata.TabIndex = 11;
             this.cmd_Changedata.Text = "เปลี่ยนข้อมูลตาราง";
             this.cmd_Changedata.UseVisualStyleBackColor = false;
-            this.cmd_Changedata.Click += new System.EventHandler(this.cmd_Changedata_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("TH SarabunPSK", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button1.Location = new System.Drawing.Point(816, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 44);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "กลับสู่หน้าหลัก";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cmd_Savedata
-            // 
-            this.cmd_Savedata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cmd_Savedata.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmd_Savedata.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.cmd_Savedata.FlatAppearance.BorderSize = 3;
-            this.cmd_Savedata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmd_Savedata.Font = new System.Drawing.Font("TH SarabunPSK", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.cmd_Savedata.Location = new System.Drawing.Point(36, 605);
-            this.cmd_Savedata.Name = "cmd_Savedata";
-            this.cmd_Savedata.Size = new System.Drawing.Size(193, 44);
-            this.cmd_Savedata.TabIndex = 5;
-            this.cmd_Savedata.Text = "บันทึกการเปลี่ยนแปลง";
-            this.cmd_Savedata.UseVisualStyleBackColor = false;
-            this.cmd_Savedata.Visible = false;
-            this.cmd_Savedata.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lbl_Articlepage
-            // 
-            this.lbl_Articlepage.AutoSize = true;
-            this.lbl_Articlepage.Font = new System.Drawing.Font("TH SarabunPSK", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbl_Articlepage.Location = new System.Drawing.Point(25, 39);
-            this.lbl_Articlepage.Name = "lbl_Articlepage";
-            this.lbl_Articlepage.Size = new System.Drawing.Size(305, 66);
-            this.lbl_Articlepage.TabIndex = 6;
-            this.lbl_Articlepage.Text = "ตารางเรียนม.3/3";
             // 
             // img_Teacherpicture
             // 
-            this.img_Teacherpicture.Location = new System.Drawing.Point(44, 329);
+            this.img_Teacherpicture.Location = new System.Drawing.Point(45, 283);
             this.img_Teacherpicture.Name = "img_Teacherpicture";
             this.img_Teacherpicture.Size = new System.Drawing.Size(182, 204);
             this.img_Teacherpicture.TabIndex = 5;
             this.img_Teacherpicture.TabStop = false;
             // 
-            // frm_Learntable
+            // frm_Useroomtable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pnl_Learntable);
             this.Controls.Add(this.lbl_Articlepage);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pnl_Learntable);
             this.Controls.Add(this.pnl_Information);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.cmd_Savedata);
             this.Controls.Add(this.cmd_Changedata);
-            this.Name = "frm_Learntable";
+            this.Name = "frm_Useroomtable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LearnTable";
-            this.Load += new System.EventHandler(this.frm_Learntable_Shown);
+            this.Text = "UseroomTable";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnl_Information.ResumeLayout(false);
@@ -1645,40 +1625,19 @@
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem เกยวกบToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem เกยวกบโปรแกรมToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ตดตอToolStripMenuItem;
         private System.Windows.Forms.Panel pnl_Information;
-        private System.Windows.Forms.Panel pnl_Learntable;
-        private System.Windows.Forms.Button cmd_Changedata;
-        private System.Windows.Forms.TextBox txt_Timeandday;
         private System.Windows.Forms.Label lbl_Teacher;
         private System.Windows.Forms.PictureBox img_Teacherpicture;
         private System.Windows.Forms.Label lbl_Teacherinlesson;
-        private System.Windows.Forms.Label lbl_room;
-        private System.Windows.Forms.Label lbl_Whatroom;
         private System.Windows.Forms.Label lbl_Lesson;
         private System.Windows.Forms.Label lbl_Whatlesson;
+        private System.Windows.Forms.Label lbl_Articlepage;
+        private System.Windows.Forms.Button cmd_Savedata;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txt_Time10;
-        private System.Windows.Forms.TextBox txt_Time9;
-        private System.Windows.Forms.TextBox txt_Time8;
-        private System.Windows.Forms.TextBox txt_Time7;
-        private System.Windows.Forms.TextBox txt_Time6;
-        private System.Windows.Forms.TextBox txt_Time5;
-        private System.Windows.Forms.TextBox txt_Time4;
-        private System.Windows.Forms.TextBox txt_Time3;
-        private System.Windows.Forms.TextBox txt_Time2;
-        private System.Windows.Forms.TextBox txt_Time1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txt_T10;
-        private System.Windows.Forms.TextBox txt_T9;
-        private System.Windows.Forms.TextBox txt_T8;
-        private System.Windows.Forms.TextBox txt_T7;
-        private System.Windows.Forms.TextBox txt_T6;
-        private System.Windows.Forms.TextBox txt_T5;
-        private System.Windows.Forms.TextBox txt_T4;
-        private System.Windows.Forms.TextBox txt_T3;
-        private System.Windows.Forms.TextBox txt_T2;
-        private System.Windows.Forms.TextBox txt_T1;
+        private System.Windows.Forms.Panel pnl_Learntable;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_Fri10;
         private System.Windows.Forms.TextBox txt_Fri9;
         private System.Windows.Forms.TextBox txt_Fri8;
@@ -1734,9 +1693,29 @@
         private System.Windows.Forms.TextBox txt_Wednesday;
         private System.Windows.Forms.TextBox txt_Tuesday;
         private System.Windows.Forms.TextBox txt_Monday;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button cmd_Savedata;
-        private System.Windows.Forms.Label lbl_Articlepage;
+        private System.Windows.Forms.TextBox txt_Time10;
+        private System.Windows.Forms.TextBox txt_Time9;
+        private System.Windows.Forms.TextBox txt_Time8;
+        private System.Windows.Forms.TextBox txt_Time7;
+        private System.Windows.Forms.TextBox txt_Time6;
+        private System.Windows.Forms.TextBox txt_Time5;
+        private System.Windows.Forms.TextBox txt_Time4;
+        private System.Windows.Forms.TextBox txt_Time3;
+        private System.Windows.Forms.TextBox txt_Time2;
+        private System.Windows.Forms.TextBox txt_Time1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txt_T10;
+        private System.Windows.Forms.TextBox txt_T9;
+        private System.Windows.Forms.TextBox txt_T8;
+        private System.Windows.Forms.TextBox txt_T7;
+        private System.Windows.Forms.TextBox txt_T6;
+        private System.Windows.Forms.TextBox txt_T5;
+        private System.Windows.Forms.TextBox txt_T4;
+        private System.Windows.Forms.TextBox txt_T3;
+        private System.Windows.Forms.TextBox txt_T2;
+        private System.Windows.Forms.TextBox txt_T1;
+        private System.Windows.Forms.TextBox txt_Timeandday;
+        private System.Windows.Forms.Button cmd_Changedata;
     }
 }

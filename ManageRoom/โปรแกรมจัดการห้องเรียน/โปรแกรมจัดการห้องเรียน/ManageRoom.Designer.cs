@@ -88,8 +88,9 @@
             // ออกToolStripMenuItem
             // 
             this.ออกToolStripMenuItem.Name = "ออกToolStripMenuItem";
-            this.ออกToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
+            this.ออกToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.ออกToolStripMenuItem.Text = "ออก";
+            this.ออกToolStripMenuItem.Click += new System.EventHandler(this.ออกToolStripMenuItem_Click);
             // 
             // ตงคาToolStripMenuItem
             // 
@@ -179,6 +180,7 @@
             // cmd_SelectRoom
             // 
             this.cmd_SelectRoom.BackColor = System.Drawing.Color.Violet;
+            this.cmd_SelectRoom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_SelectRoom.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
             this.cmd_SelectRoom.FlatAppearance.BorderSize = 3;
             this.cmd_SelectRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -210,6 +212,7 @@
             // cmd_ReportToSupport
             // 
             this.cmd_ReportToSupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmd_ReportToSupport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_ReportToSupport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cmd_ReportToSupport.FlatAppearance.BorderSize = 3;
             this.cmd_ReportToSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -220,10 +223,12 @@
             this.cmd_ReportToSupport.TabIndex = 8;
             this.cmd_ReportToSupport.Text = "แจ้งอุปกรณ์ชำรุด/หาย";
             this.cmd_ReportToSupport.UseVisualStyleBackColor = false;
+            this.cmd_ReportToSupport.Click += new System.EventHandler(this.cmd_ReportToSupport_Click);
             // 
             // cmd_Member
             // 
             this.cmd_Member.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmd_Member.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_Member.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cmd_Member.FlatAppearance.BorderSize = 3;
             this.cmd_Member.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -234,10 +239,12 @@
             this.cmd_Member.TabIndex = 7;
             this.cmd_Member.Text = "นักเรียนในห้อง";
             this.cmd_Member.UseVisualStyleBackColor = false;
+            this.cmd_Member.Click += new System.EventHandler(this.cmd_Member_Click);
             // 
             // cmd_UsedClassTable
             // 
             this.cmd_UsedClassTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmd_UsedClassTable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_UsedClassTable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cmd_UsedClassTable.FlatAppearance.BorderSize = 3;
             this.cmd_UsedClassTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -248,10 +255,12 @@
             this.cmd_UsedClassTable.TabIndex = 6;
             this.cmd_UsedClassTable.Text = "ตารางการใช้ห้องเรียน";
             this.cmd_UsedClassTable.UseVisualStyleBackColor = false;
+            this.cmd_UsedClassTable.Click += new System.EventHandler(this.cmd_UsedClassTable_Click);
             // 
             // cmd_WorkhomeTable
             // 
             this.cmd_WorkhomeTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmd_WorkhomeTable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_WorkhomeTable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cmd_WorkhomeTable.FlatAppearance.BorderSize = 3;
             this.cmd_WorkhomeTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -267,6 +276,7 @@
             // cmd_LearnTable
             // 
             this.cmd_LearnTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmd_LearnTable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_LearnTable.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cmd_LearnTable.FlatAppearance.BorderSize = 3;
             this.cmd_LearnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
